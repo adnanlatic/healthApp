@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "809604335727",
+    "firebase_url": "https://masterhealthapp-97c59-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "masterhealthapp-97c59",
+    "storage_bucket": "masterhealthapp-97c59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809604335727:android:3360622e02d060d81be59a",
+        "android_client_info": {
+          "package_name": "com.adnan.healthAppMaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809604335727-ga6unbahcmopekfc0jfiu85j216iffdn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkLUCpTD-jD6-A_Vyn9kd8L8jc9dUATE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809604335727-ga6unbahcmopekfc0jfiu85j216iffdn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
