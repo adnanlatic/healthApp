@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/idProfileSection"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/main_header_selector"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/idThermostatIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:padding="4dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/thermostat" />
+
+        <TextView
+            android:id="@+id/idVrijednostMjerenjaTemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idThermostatIcon"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="3dp"
+            android:text="@string/vrijednostMjerenjaTemp"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/idMjerenjeTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idVrijednostMjerenjaTemp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="@string/thermometar"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChartTemp"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_below="@id/idProfileSection"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idBackToHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/health_blue_color"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        android:src="@drawable/ic_baseline_home_24"
+        android:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</RelativeLayout>

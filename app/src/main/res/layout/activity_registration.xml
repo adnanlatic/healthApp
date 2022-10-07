@@ -4,8 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_shade_1"
     tools:context=".RegistrationActivity">
+
+    <ImageView
+        android:id="@+id/idImageViewLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/logo_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/idInfoLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Master rad - Adnan Latic"
+        android:textColor="@color/health_blue_color"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_below="@id/idImageViewLogo"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        />
     
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/idTILUserName"
@@ -13,12 +34,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="140dp"
-        android:hint="Enter User Name"
+        android:layout_marginTop="100dp"
+        android:layout_below="@+id/idImageViewLogo"
+        android:hint="Unesite korisnicko ime"
         style="@style/TextInputLayout"
         android:padding="5dp"
-        android:textColorHint="@color/white"
-        app:hintTextColor="@color/white">
+        android:textColorHint="@color/health_blue_color"
+        app:hintTextColor="@color/health_blue_color">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/idEdtUserName"
@@ -26,8 +48,8 @@
             android:layout_height="wrap_content"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColor="@color/health_blue_color"
+            android:textColorHint="@color/health_blue_color"
             android:textSize="14sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -40,11 +62,11 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
-        android:hint="Enter Password"
+        android:hint="Unesite lozinku"
         style="@style/TextInputLayout"
         android:padding="5dp"
-        android:textColorHint="@color/white"
-        app:hintTextColor="@color/white">
+        android:textColorHint="@color/health_blue_color"
+        app:hintTextColor="@color/health_blue_color">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/idEdtPassword"
@@ -52,8 +74,8 @@
             android:layout_height="wrap_content"
             android:importantForAutofill="no"
             android:inputType="textPassword"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColor="@color/health_blue_color"
+            android:textColorHint="@color/health_blue_color"
             android:textSize="14sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -66,11 +88,11 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
-        android:hint="Confirm Password"
+        android:hint="Potvrdi lozinku"
         style="@style/TextInputLayout"
         android:padding="5dp"
-        android:textColorHint="@color/white"
-        app:hintTextColor="@color/white">
+        android:textColorHint="@color/health_blue_color"
+        app:hintTextColor="@color/health_blue_color">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/idEdtCnfPwd"
@@ -78,11 +100,47 @@
             android:layout_height="wrap_content"
             android:importantForAutofill="no"
             android:inputType="textPassword"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColor="@color/health_blue_color"
+            android:textColorHint="@color/health_blue_color"
             android:textSize="14sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/idTILCnfPwd"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button_back"
+        android:id="@+id/idBtnRegister"
+        android:text="Registruj se"
+        android:textAllCaps="false"
+    />
 
+    <TextView
+        android:id="@+id/idTVLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prijavi se"
+        android:textColor="@color/health_blue_color"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_below="@id/idBtnRegister"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+    />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/idPBLoading"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress_back"
+        android:visibility="gone"
+        />
 
 </RelativeLayout>

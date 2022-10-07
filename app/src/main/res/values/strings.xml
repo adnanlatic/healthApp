@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Health App Master</string>
+    <string name="app_name">Pacijent monitor - Master rad</string>
     <string name="title_activity_add_course">AddCourseActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -18,4 +18,11 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="elektrokardiogram_ekg">Elektrokardiogram (EKG)</string>
+    <string name="sve_vrijednosti">Prikazi sva mjerenja</string>
+    <string name="vrijednostMjerenjaEKG">0 bpm</string>
+    <string name="vrijednostMjerenjaTemp">26.5 °C</string>
+    <string name="ime_i_prezime_pacijenta">Ime i prezime pacijenta</string>
+    <string name="internet_status">Status: Spojen na mrezu!</string>
+    <string name="thermometar">Tjelesna temperatura</string>
 </resources>

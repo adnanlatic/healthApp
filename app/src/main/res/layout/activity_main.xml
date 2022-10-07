@@ -1,18 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/idRLHome"
+    android:background="@color/blue_shade_1"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/idProfileSection"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="@drawable/main_header_selector"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/idProfilePicture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="4dp"
+            android:layout_marginTop="-50dp"
+            android:layout_centerHorizontal="true"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            app:srcCompat="@drawable/pp"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="4dp"
+            />
+
+        <TextView
+            android:id="@+id/idPatientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ime_i_prezime_pacijenta"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_below="@id/idProfilePicture"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/idPatientStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/internet_status"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_below="@id/idPatientName"
+            android:layout_marginTop="2dp"
+            android:textSize="12sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/idHeartCard"
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            app:cardCornerRadius="15sp"
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/idHeartBeatIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:padding="4dp"
+                    android:src="@drawable/hicon" />
+
+                <TextView
+                    android:id="@+id/idMjerenjeKrvnogPritiska"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_toEndOf="@id/idHeartBeatIcon"
+                    android:padding="3dp"
+                    android:text="@string/elektrokardiogram_ekg"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/idVrijednostMjerenjaEKG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/idMjerenjeKrvnogPritiska"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:padding="3dp"
+                    android:paddingStart="40dp"
+                    android:text="@string/vrijednostMjerenjaEKG"
+                    android:textColor="@color/health_blue_color"
+                    android:textSize="45sp"
+                    android:textAlignment="center"
+                    />
+
+                <TextView
+                    android:id="@+id/idPrikaziSveEKG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_below="@id/idVrijednostMjerenjaEKG"
+                    android:padding="3dp"
+                    android:textAlignment="center"
+                    android:text="@string/sve_vrijednosti"
+                    android:textColor="@color/blue_shade_2"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/idTemperatureCard"
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            app:cardCornerRadius="15sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_below="@+id/idHeartCard"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/idThermostatIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:padding="4dp"
+                    android:src="@drawable/thermostat" />
+
+                <TextView
+                    android:id="@+id/idMjerenjeTemperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toEndOf="@id/idThermostatIcon"
+                    android:padding="3dp"
+                    android:text="@string/thermometar"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/idVrijednostMjerenjaTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/idMjerenjeTemperature"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:padding="3dp"
+                    android:paddingStart="40dp"
+                    android:text="@string/vrijednostMjerenjaTemp"
+                    android:textColor="@color/health_blue_color"
+                    android:textSize="45sp"
+                    android:textAlignment="center"
+                    />
+
+                <TextView
+                    android:id="@+id/idPrikaziSveTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_below="@id/idVrijednostMjerenjaTemp"
+                    android:padding="3dp"
+                    android:textAlignment="center"
+                    android:text="@string/sve_vrijednosti"
+                    android:textColor="@color/blue_shade_2"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/idStatusCard"
+            android:layout_width="match_parent"
+            android:layout_height="90sp"
+            app:cardCornerRadius="15sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_below="@+id/idTemperatureCard"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/idStatusMessageLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Status:"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/idStatusMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/idStatusMessageLabel"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:padding="3dp"
+                    android:text="Svi parametri su u granicama normalnih vrijednosti!"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/idPBLoading"
+        android:indeterminate="true"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/progress_back"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idAddFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/health_blue_color"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idSendEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/red"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        android:src="@drawable/ic_baseline_email_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</RelativeLayout>
